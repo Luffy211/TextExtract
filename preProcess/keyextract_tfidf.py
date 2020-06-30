@@ -66,7 +66,7 @@ def getKeywords_tfidf(data,stopkey,topK):
         word_weight = pd.concat([df_word, df_weight], axis=1) # 拼接词汇列表和权重列表
         word_weight = word_weight.sort_values(by="weight",ascending = False) # 按照权重值降序排列
         keyword = np.array(word_weight['word']) # 选择词汇列并转成数组格式
-        print("这里是输出结果----")
+        print("这里是输出结果 ----")
         print(keyword)
         word_split = [keyword[x] for x in range(0,len(df_word))] # 抽取前topK个词汇作为关键词
         word_split = " ".join(word_split)
